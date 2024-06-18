@@ -17,15 +17,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //return TaskResource::collection(Task::all());
-        // $tasks = Task::all()
-        // ->orderByDesc('created_at')
-        // ->paginate(5);
-        // return view('Task.index', compact('tasks'));
-        $tasks = Task::orderByDesc('created_at')
-                 ->paginate(5);
-
-        return view('Task.index', compact('tasks'));
+        return TaskResource::collection(Task::all());
+        
     }
 
    
